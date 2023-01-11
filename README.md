@@ -1,4 +1,4 @@
-# ralph_simple_site
+# simple_site
 
 Three examples are included:
 ----------------------------
