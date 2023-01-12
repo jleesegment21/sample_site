@@ -214,50 +214,50 @@ today = mm + '/' + dd + '/' + yyyy ;
       
      function addRegistration() {  
        // add identify call
-   analytics.identify(reg_user_id.value, {
-     fname: reg_fname.value,
-     lname: reg_lname.value,
-     phone: reg_phone.value,
-     email: reg_email.value,
-     name: reg_fname.value + ' ' + reg_lname.value
-});
-        }
+         analytics.identify(reg_user_id.value, {
+           fname: reg_fname.value,
+           lname: reg_lname.value,
+           phone: reg_phone.value,
+           email: reg_email.value,
+           name: reg_fname.value + ' ' + reg_lname.value
+      });
+     }
       
  
       
      function addProduct() {  
        // add product info requested 
-analytics.track("Product Info Requested", {
-        product: product_product.value,
-        role: product_role.value,
-  "context": {
-    "traits" : {
-      "email": product_email.value
-    }
-  } 
+        analytics.track("Product Info Requested", {
+                product: product_product.value,
+                role: product_role.value,
+                "context": {
+                  "traits" : {
+                    "email": product_email.value
+                  }
+                } 
+        }
+     );
 }
-       );
-     }
    
        
 
    function addTrial() {  
        // add trial call
       analytics.track("Trial Request", {
-     trial_product: trial_product.value,
-     trial_start_date: trial_start_date.value,
-          trial_request_date: today,
-         "context": {
-    "traits" : {
-       trial_contact: trial_contact.value,
-     email: trial_email.value
-    }
-  } 
-}     
-       );
-        }  
+           trial_product: trial_product.value,
+           trial_start_date: trial_start_date.value,
+                trial_request_date: today,
+               "context": {
+                    "traits" : {
+                       trial_contact: trial_contact.value,
+                     email: trial_email.value
+                    }
+               } 
+      }     
+   );
+}  
       
-      </script>
+</script>
       
 </main>
 <rside>
